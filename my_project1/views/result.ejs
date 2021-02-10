@@ -1,0 +1,19 @@
+<%-  include("./header.ejs")%>
+    <h1>Result are :-</h1>
+    <ul>
+       
+        <div class= "row">
+    <%movieData['Search'].forEach(function (movie) {%>
+        <div class="card" style="width: 18rem;">
+            <img src="<%=movie.Poster%>" class="card-img-top" alt="..">
+            <div class="card-body">
+              <h5 class="card-title"><%=movie.Title%></h5>
+              <p class="card-text"></p>
+              <a href="/result/<%=movie.imdbID%>" class="btn btn-primary">Movie info....</a>
+            </div>
+          </div>
+        <%})%>   
+        </div>
+        
+            </ul>
+            <%-  include("./footer.ejs")%>
